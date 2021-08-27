@@ -14,6 +14,6 @@
   notify: restart-apache
   template: 
     dest: /etc/httpd/conf
-    src: files/apache.conf.j2
+    src: file/apache.conf.j2
 
 
