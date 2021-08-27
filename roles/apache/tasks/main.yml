@@ -8,5 +8,12 @@
 - 
   copy: "src=file/index.html dest=/var/www/html"
   name: "deploy html file"
-  notify: "restart httpd"
+  notify: "restart httpd" 
+- 
+  name: "Set up virtuahHost"
+  notify: restart-apache
+  template: 
+    dest: /etc/httpd/conf
+    src: files/apache.conf.j2
+
 
